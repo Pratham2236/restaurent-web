@@ -1,0 +1,508 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* same proerties css  */
+.font-M {
+  font-family: Montserrat;
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-orange {
+  font-family: montserrat;
+  background-color: #ff4d00;
+  color: white;
+  padding: 12px;
+  border-radius: 100px;
+}
+.items-short {
+  display: flex;
+  align-items: center;
+}
+.color-b {
+  color: #12202f;
+}
+.butn1 {
+  background-color: #ff4d00;
+}
+.phase2 {
+  color: #eaa73b;
+}
+.same {
+  justify-content: center;
+  align-items: center;
+  background-color: #ebe3cd;
+  display: flex;
+  width: 200px;
+  height: 60px;
+}
+/* +++++++++++++++ ends here +++++++++++++++ */
+body {
+  background-color: #ebe3cd;
+  font-family: Playfair Display;
+  text-transform: capitalize;
+}
+.nav {
+  background-color: #12202f;
+}
+.table1 {
+  width: calc(30% - 50px);
+}
+.date-con {
+  border: 1px solid #25313d;
+}
+input {
+  background-color: #ebe3cd;
+}
+input:focus {
+  outline: none;
+}
+input[type="email"] {
+  padding: 0 10px 0 10px;
+  min-width: 20px;
+  margin-left: 10px;
+}
+.pages {
+  display: flex;
+}
+.book-container {
+  width: calc(50% * 2);
+  height: 20%;
+}
+.hamburger {
+  background: none;
+  border: none;
+}
+/* ++++++++++++++++++++++++++++++++++ phase2 +++++++++++++++++++++++++++++++++++ */
+.items {
+  width: 350px;
+  height: 500px;
+}
+.button-con {
+  background-color: #34be8b;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #34be8b;
+}
+/* ++++++++++++++++++++++++++++++++++++ phase3 +++++++++++++++++++++++++++++++++++ */
+.table {
+  display: flex;
+  justify-content: space-between;
+}
+/* ++++++++++++++++++++++++++++++++++++ phase7 +++++++++++++++++++++++++++++++++++++ */
+.input-footer {
+  width: 600px;
+  height: 60px;
+  border: 2px solid white;
+}
+.foot {
+  height: 150px;
+}
+.input-footer::placeholder {
+  color: #393939;
+}
+.foot::placeholder {
+  color: #393939;
+  position: relative;
+  top: -32px;
+}
+/* ++++++++++++++++++++++++++++++++++++++++ phase8 +++++++++++++++++++++++++++++++++++++++ */
+.input-footer[type] {
+  padding-left: 20px;
+}
+/* +++++++++++++++++++++++++++++++++++ responsive queries ++++++++++++++++++++++++++++++ */
+@media only screen and (max-width: 1375px) {
+  .review-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .booked {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1190px) {
+  .table-per {
+    display: none;
+  }
+  .items {
+    width: 250px;
+    height: 400px;
+  }
+  .image-food {
+    width: 120px;
+  }
+  .food-font {
+    font-size: 26px;
+  }
+  .food-description {
+    font-size: 12px;
+  }
+  .food-button {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .chef-bg {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .nav {
+    font-size: 12px;
+    height: 40px;
+  }
+  .pages a {
+    padding: 16px;
+    font-size: 12px;
+  }
+  .content-container {
+    font-size: 12px;
+  }
+  #cap {
+    font-size: 18px;
+  }
+  #cap1 {
+    font-size: 10px;
+  }
+  .book-container {
+    height: fit-content;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .same {
+    height: 50px;
+    width: 150px;
+  }
+  .bar-title {
+    font-size: 30px;
+  }
+  .bar-story {
+    font-size: 18px;
+  }
+  .bar-dec {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .bartender-img {
+    height: 400px;
+  }
+  .items {
+    width: 180px;
+    height: 300px;
+    margin-top: 10px;
+  }
+  .image-food {
+    width: 80px;
+  }
+  .food-font {
+    font-size: 18px;
+  }
+  .food-description {
+    font-size: 8px;
+  }
+  .food-button {
+    padding: 6px;
+    font-size: 6px;
+  }
+  .input-footer {
+    width: 400px;
+    height: 60px;
+  }
+  .foot {
+    height: 130px;
+  }
+  .footer-page {
+    font-size: 12px;
+  }
+  .foot-head {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .follow {
+    font-size: 14px;
+  }
+  .face {
+    width: 25px;
+    height: 25px;
+  }
+  .about {
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 773px) {
+  #cap {
+    font-size: 14px;
+  }
+  .same {
+    height: 40px;
+    width: 130px;
+  }
+  .covid-pro {
+    font-size: 15px;
+  }
+  .covid-care {
+    font-size: 26px;
+  }
+  .covid-button {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .bar-title {
+    font-size: 20px;
+  }
+  .bar-story {
+    font-size: 12px;
+  }
+  .bar-dec {
+    font-size: 8px;
+    line-height: 20px;
+  }
+  .bartender-img {
+    height: 300px;
+    margin-top: 80px;
+  }
+  .again {
+    width: 400px;
+    height: 100px;
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+  .review1-head {
+    font-size: 16px;
+  }
+  .review1-dec {
+    font-size: 8px;
+    line-height: 12px;
+    margin-top: 0px;
+  }
+  .review1-star {
+    width: 100px;
+    margin-top: 2px;
+  }
+  .foot-image {
+    display: none;
+  }
+  .semi-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-foot {
+    width: 250px;
+    position: relative;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 695px) {
+  .heading {
+    font-size: 90px;
+    display: block;
+    margin: auto;
+  }
+  .table-per {
+    display: none;
+  }
+  .table-image {
+    display: none;
+  }
+  #cap {
+    font-size: 20px;
+  }
+  #cap1 {
+    font-size: 10px;
+  }
+  .buttons {
+    padding-top: 10px;
+  }
+  .book {
+    padding-top: 30px;
+  }
+  .pages {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    margin-top: 15px;
+    z-index: 1;
+  }
+  .pages.open {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .containerr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav a {
+    color: #12202f;
+    text-align: center;
+    text-decoration: none;
+  }
+  .nav a:hover {
+    background-color: #12202f;
+    border-radius: 20px;
+    outline: 8px solid white;
+    color: white;
+  }
+  .sign {
+    color: white;
+  }
+  .same {
+    row-gap: 15px;
+  }
+}
+@media only screen and (max-width: 546px) {
+  .nav {
+    font-size: 10px;
+  }
+  .heading {
+    font-size: 40px;
+    padding-right: 140px;
+  }
+  .pages a {
+    padding: 10px;
+    font-size: 10px;
+  }
+  .bar-title {
+    font-size: 50px;
+  }
+  .bar-story {
+    font-size: 22px;
+  }
+  .bar-dec {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .bartender-img {
+    margin-top: 2px;
+  }
+  .covid-pro {
+    font-size: 12px;
+  }
+  .covid-care {
+    font-size: 26px;
+  }
+  .covid-button {
+    font-size: 6px;
+    padding: 8px;
+    width: 60px;
+    margin-top: 10px;
+  }
+  .foot-head {
+    font-size: 16px;
+  }
+  .input-foot {
+    width: 150px;
+    height: 20px;
+    text-align: right;
+  }
+  .footer-page {
+    font-size: 10px;
+  }
+  .about {
+    gap: 8px;
+    justify-content: baseline;
+    display: flex;
+  }
+  .follow {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+  .face {
+    width: 15px;
+    height: 15px;
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .menu-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .men-image {
+    padding: 8px;
+  }
+  .review-1 {
+    padding-left: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .again {
+    width: 300px;
+    height: 90px;
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+
+  .review1-head {
+    font-size: 10px;
+  }
+  .review1-dec {
+    font-size: 6px;
+    line-height: 12px;
+    padding-bottom: 8px;
+  }
+  .review1-star {
+    width: 50px;
+    padding-bottom: 8px;
+  }
+  .input-footer {
+    width: 310px;
+  }
+  .input-foot {
+    width: 120px;
+    height: 20px;
+    text-align: right;
+  }
+  .footer-page {
+    font-size: 7px;
+    line-height: 13px;
+    margin: -1px;
+  }
+  .foot-head {
+    font-size: 14px;
+  }
+  .about {
+    gap: 10px;
+    margin-bottom: 2px;
+  }
+  .follow {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+  .face {
+    width: 15px;
+    height: 15px;
+    font-size: 8px;
+  }
+  .chef-dec {
+    font-size: 9px;
+  }
+}
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: opacity 5s ease-out, transform 2s ease;
+}
+
+.scroll-fade-in.visible {
+  opacity: 50;
+  transform: translateY(0);
+}
