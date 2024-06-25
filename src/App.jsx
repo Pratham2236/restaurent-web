@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -27,6 +27,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [text1, setText1] = useState("");
+  const [person, setPerson] = useState("");
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -36,9 +37,23 @@ function App() {
     setMessage(e.target.value);
   };
 
+  const validateTime = (timeInput) => {
+    const time = new Date(`1970-01-01T${timeInput}:00Z`);
+    const startTime = new Date("1970-01-01T10:00:00Z");
+    const endTime = new Date("1970-01-01T22:00:00Z");
+
+    return time >= startTime && time <= endTime;
+  };
+
   const submit = async (event) => {
     event.preventDefault();
-    const data = { email, message, date, time }; // Include date and time in the request body
+
+    if (!validateTime(time)) {
+      alert("Please select a time between 10:00 AM and 10:00 PM.");
+      return;
+    }
+
+    const data = { email, person, date, time };
 
     try {
       const response = await fetch("http://localhost:5001/send-email", {
@@ -53,7 +68,7 @@ function App() {
         throw new Error("Failed to send email");
       }
       console.log("Email sent successfully");
-      setText1("email has been sent successfully");
+      setText1("Email has been sent successfully");
     } catch (error) {
       console.error("Error sending email:", error);
       setText1("Failed to send email");
@@ -63,7 +78,7 @@ function App() {
   return (
     <>
       <div className="containerr p-5 relative flex-col items-short">
-        <div className="nav h-16 justify-between relative items-short rounded-full w-11/12 mt-14 text-white text-lg bg-black p-4">
+        <div className="nav h-16 relative z-50 justify-between items-short mt-8 rounded-full w-11/12 text-white text-lg bg-black p-4">
           <h4 className="pl-6">
             <FontAwesomeIcon
               icon={faUtensils}
@@ -73,16 +88,16 @@ function App() {
           </h4>
 
           <div className={`pages ${isNavOpen ? "open" : ""}`}>
-            <a href="#" className="px-4 font-M p-5">
+            <a href="#" className="nav-hover px-4 font-M p-5">
               Home
             </a>
-            <a href="#" className="px-4 font-M p-5">
+            <a href="#" className="nav-hover px-4 font-M p-5">
               Menu
             </a>
-            <a href="#" className="px-4 font-M p-5">
+            <a href="#" className="nav-hover px-4 font-M p-5">
               About us
             </a>
-            <a href="#" className="px-4 font-M p-5">
+            <a href="#" className="nav-hover px-4 font-M p-5">
               Contact
             </a>
           </div>
@@ -143,11 +158,12 @@ function App() {
             <ScrollFadeIn className="scroll-fade-in">
               <form
                 onSubmit={submit}
+                id="timeForm"
                 className="book-container relative p-8 items-short justify-around font-M mt-5 bg-white rounded-xl"
               >
                 <div className="date">
                   <p className="pb-1">Date:</p>
-                  <div className="date-con bg-[#ebe3cd] same text-center rounded-3xl bg-gray-100">
+                  <div className="date-con bg-[#ebe3cd] same text-center rounded-xl bg-gray-100">
                     <input
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
@@ -158,18 +174,33 @@ function App() {
                 </div>
                 <div className="date">
                   <p className="pb-1">Time:</p>
-                  <div className="date-con same d-flex text-center rounded-3xl">
+                  <div className="date-con same d-flex text-center rounded-xl">
                     <input
                       value={time}
                       onChange={(e) => setTime(e.target.value)}
+                      name="timeInput"
                       type="time"
+                      id="timeInput"
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="date">
+                  <p className="pb-1">Number Of Person:</p>
+                  <div className="date-con same d-flex text-center rounded-xl">
+                    <input
+                      onChange={(e) => setPerson(e.target.value)}
+                      value={person}
+                      name=""
+                      type="number"
+                      className="w-12"
                       required
                     />
                   </div>
                 </div>
                 <div className="date">
                   <p className="pb-1">Email:</p>
-                  <div className="date-con same text-center rounded-3xl">
+                  <div className="date-con same text-center rounded-xl">
                     <input
                       className="rounded-lg"
                       type="email"
@@ -180,22 +211,11 @@ function App() {
                     />
                   </div>
                 </div>
-                {/* <div className="date">
-                  <p className="pb-1">Message:</p>
-                  <div className="date-con same text-center rounded-3xl">
-                    <textarea
-                      className="rounded-lg"
-                      value={message}
-                      onChange={handleMessageChange}
-                      placeholder="Type Your Message"
-                    />
-                  </div>
-                </div> */}
                 <div className="time">
                   <p className="invisible">jgfd</p>
-                  <div className="button-con same text-white w-fit h-fit rounded-3xl">
+                  <div className="button-con same text-white w-fit h-fit rounded-xl">
                     <button type="submit" className="Submit">
-                      Check Availability
+                      Book Now
                     </button>
                   </div>
                 </div>

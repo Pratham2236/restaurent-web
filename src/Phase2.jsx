@@ -41,7 +41,7 @@ const Phase2 = () => {
           <img className="image-food" src={item.imgSrc} alt={item.title} />
           <h1 className="food-font text-4xl mt-2">{item.title}</h1>
           <p className="food-description font-M mt-4">{item.description}</p>
-          <button className="food-button button-orange mt-6 ">
+          <button className="butn1 food-button button-orange mt-6 ">
             Read More
           </button>
         </div>

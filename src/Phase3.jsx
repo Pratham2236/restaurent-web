@@ -12,7 +12,7 @@ function Phase3() {
           <h1 className='covid-care color-b text-4xl'>We Care About You</h1>
         </ScrollFadeIn>
         <ScrollFadeIn className="scroll-fade-in">
-          <button className='covid-button mt-5 button-orange'>Read More</button>
+          <button className='butn1 covid-button mt-5 button-orange'>Read More</button>
         </ScrollFadeIn>
       </div>
       <ScrollFadeIn className="scroll-fade-in">

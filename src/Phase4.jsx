@@ -18,7 +18,7 @@ function Phase4() {
             cumque mollitia nobis! Dicta non <br />
             consectetur nostrum maxime,
           </p>
-          <button className="bar-butn butn1 font-M text-white mt-6 bg-[#ffff] p-3 rounded-full">
+          <button className="bar-butn butn1 font-M text-white mt-6 bg-[#ff4d00] p-3 rounded-full">
             Read More
           </button>
         </div>

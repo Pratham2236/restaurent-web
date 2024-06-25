@@ -21,7 +21,7 @@ function phase5() {
             </p>
           </ScrollFadeIn>
           <ScrollFadeIn className="scroll-fade-in">
-            <button className="button-orange mt-5">Read More</button>
+            <button className="butn1 button-orange mt-5">Read More</button>
           </ScrollFadeIn>
         </div>
         <ScrollFadeIn className="scroll-fade-in">

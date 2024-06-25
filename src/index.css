@@ -24,9 +24,6 @@
 .color-b {
   color: #12202f;
 }
-.butn1 {
-  background-color: #ff4d00;
-}
 .phase2 {
   color: #eaa73b;
 }
@@ -84,6 +81,10 @@ input[type="email"] {
   background-color: #34be8b;
   transition: all 0.2s ease-in-out;
   border: 2px solid #34be8b;
+  &:hover{
+    background-color: white;
+    color: #34be8b;
+  }
 }
 /* ++++++++++++++++++++++++++++++++++++ phase3 +++++++++++++++++++++++++++++++++++ */
 .table {
@@ -134,6 +135,16 @@ input[type="email"] {
   .image-food {
     width: 120px;
   }
+  .date-con{
+    width: 140px;
+    height: 50px;
+    font-size: 12px;
+  }
+  .button-con{
+    width: 140px;
+    height: 50px;
+    font-size: 12px;
+  }
   .food-font {
     font-size: 26px;
   }
@@ -142,6 +153,9 @@ input[type="email"] {
   }
   .food-button {
     padding: 10px;
+    font-size: 12px;
+  }
+  .date p{
     font-size: 12px;
   }
   .chef-bg {
@@ -363,6 +377,13 @@ input[type="email"] {
   .same {
     row-gap: 15px;
   }
+  .date-con{
+    font-size: 10px;
+  }
+  .date p{
+    padding-top: 5px;
+    font-size: 10px;
+  }
 }
 @media only screen and (max-width: 546px) {
   .nav {
@@ -377,13 +398,13 @@ input[type="email"] {
     font-size: 10px;
   }
   .bar-title {
-    font-size: 50px;
+    font-size: 40px;
   }
   .bar-story {
-    font-size: 22px;
+    font-size: 18px;
   }
   .bar-dec {
-    font-size: 12px;
+    font-size: 10px;
     line-height: 20px;
   }
   .bartender-img {
@@ -496,13 +517,30 @@ input[type="email"] {
     font-size: 9px;
   }
 }
+.nav-hover:hover{
+  color: #ff4d00;
+  height: 60px;
+  transition: all 0.2s ease-in;
+}
+.sign:hover{
+  color: white;
+  transition: all 0.2s ease-in;
+}
+.butn1:hover{
+  background-color: white;
+  color: #ff4d00;
+  transition: all 0.2s ease-in;
+  outline: 2px solid #ff4d00;
+
+
+}
 .scroll-fade-in {
   opacity: 0;
   transform: translateY(90px);
-  transition: opacity 5s ease-out, transform 2s ease;
+  transition: opacity 5s ease-out, transform 1s ease-in-out;
 }
 
 .scroll-fade-in.visible {
-  opacity: 50;
+  opacity: 10;
   transform: translateY(0);
 }

@@ -6,7 +6,7 @@ function Phase6() {
     <>
       <div className="phase6-content d-flex flex-col mt-24">
         <ScrollFadeIn className="scroll-fade-in">
-          <h1 className="text-[#ff4d00] font-M">what our</h1>
+          <h1 className="text-[#ff4d00] d-flex font-M">what our</h1>
           <h1 className="text-4xl color-b">coustmer says</h1>
         </ScrollFadeIn>
       </div>
